@@ -1,0 +1,40 @@
+html{
+    display: flex;
+    justify-content: center;
+    margin:0;
+    width:100%;
+    height: 100%;
+    background: repeating-radial-gradient(farthest-side ellipse at center,  #f00b2a ,  #da1d37 ,  #bf283d 80px);
+    background-repeat: no-repeat;
+}
+
+#titre
+{
+   font-size : 38px ;
+    color : #ED1E79 ;
+    text-shadow : 4px 1px 3px #000 ;
+    filter : dropshadow(color=#000, offx=4, offy=1) ;
+}
+
+#plateau {
+    border: 3px white outset;
+    background-color:  #bf283d ;
+    opacity: 0.7;
+
+}
+#plateau td {
+    width: 2cm;
+    height: 2cm;
+    margin: 0px;
+    padding: 0px;
+    border: 2px white inset;
+    border-radius: 2cm;
+    background-color: grey;
+    cursor: pointer;
+}
+#plateau td.joueur1 {
+    background-color: black;
+}
+#plateau td.joueur2 {
+    background-color: white;
+}

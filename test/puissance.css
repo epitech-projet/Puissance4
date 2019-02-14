@@ -1,0 +1,17 @@
+html{
+    display: flex;
+    justify-content: center;
+    margin:0;
+    width:100%;
+    height: 100%;
+    background: repeating-radial-gradient(farthest-side ellipse at center,  #f00b2a ,  #da1d37 ,  #bf283d 80px);
+    background-repeat: no-repeat;
+}
+
+.grid 
+{
+ display: flex;
+ justify-content: center;
+ background-color: black;
+ margin: auto;
+}
