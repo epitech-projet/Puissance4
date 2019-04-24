@@ -8,28 +8,39 @@ $.fn.puissance4 = function(x,y){
 
 $('#jeu').append('<table>');
     for (var i = 0; i < x; i++) {
-        $('#jeu').append('<tr id="'+ i +'">');
+        $('table').append('<tr id="'+ i +'">');
         for (var s = 0; s < y; s++) {
-	        $('#jeu').append('<td class="empty"><div id="'+ i +''+ s +'" class="buttons"></div></td>');
-	    }
-	    $('td[class]').append('</tr>');
-	    
+	        $('tr:last').append('<td class="empty" id="bbb" ></td>');
+	    }    
     }
-    $('tr').append('</table>');
+    
 
-    var joueur = 0;
-$('td').click(function() {
+    /*var joueur = 0;
+    function first(s){
+    	var cells = $('#bbb');
+    	console.log(cells);
+    	for (var p = cells.length - 1; p >= 0; p--) {
+    		let cell = cells[p];
+    		if(cells.hasClass('empty')) {
+    			return cells;
+    		}
+    	}
+    }*/
+var vide = $('.empty');
+$('td').click(function(vide) {
 	
 	console.log($(this).hasClass('empty'));
-	if ($(this).hasClass('empty')) {
+	if (first(this)) {
 
 		if (joueur %2 == 0) {
 			$(this).css('background-color',joueur1);
 			$(this).removeClass('empty').addClass(joueur1);
+			
 
 		}else{
 			$(this).css('background-color',joueur2);
 			$(this).removeClass('empty').addClass(joueur2);
+			
 
 		}
 		joueur++;

@@ -5,6 +5,8 @@
         	joueur_2 : 'yellow'
     	};
 
+    	var 
+
         var settings = $.extend({}, players, options);
 
         return this.each(function(){
